@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  db:
+    image: postgres:10
+  web:
+    build: .
+    command: python -Wd manage.py runserver 0.0.0.0:8000
+    environment:
+      DEBUG: "true"
+      SECRET_KEY: "not secure only use for development"
+      DATABASE_URL: "psql://postgres@db:5432/postgres"
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  assets:
+    build: .
+    command: sh -c "yarn && yarn start"
+    volumes:
+      - .:/code
+      # HACK: use node_modules from inside image instead of one on local machine
+      - /code/node_modules

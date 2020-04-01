@@ -1,0 +1,28 @@
+{
+  "name": "{{ project_name }}",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "parcel build --no-autoinstall -d {{ project_name }}/static/dist assets/js/index.js",
+    "start": "parcel watch --no-autoinstall --no-hmr -d {{ project_name }}/static/dist assets/js/index.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-proposal-class-properties": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "@typescript-eslint/eslint-plugin": "2.x",
+    "@typescript-eslint/parser": "2.x",
+    "babel-eslint": "10.x",
+    "eslint": "6.x",
+    "eslint-config-react-app": "^5.0.2",
+    "eslint-plugin-flowtype": "4.7.0",
+    "eslint-plugin-import": "2.x",
+    "eslint-plugin-jsx-a11y": "6.x",
+    "eslint-plugin-react": "7.x",
+    "eslint-plugin-react-hooks": "3.0.0",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^2.0.2",
+    "sass": "^1.23.6",
+    "webpack": "^4.41.2"
+  }
+}

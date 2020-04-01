@@ -1,0 +1,32 @@
+{% load static %}<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% comment %} <link rel="shortcut icon" href="{% static 'favicon.ico' %}"> {% endcomment %}
+
+    {% if GOOGLE_ANALYTICS_PROPERTY_ID %}
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ GOOGLE_ANALYTICS_PROPERTY_ID }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)};
+      gtag('js', new Date());
+      gtag('config', '{{ GOOGLE_ANALYTICS_PROPERTY_ID }}');
+    </script>
+    {% endif %}
+
+    <title>{% block whole_title %}{% block title %}{% endblock %} – {{ project_name }}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'dist/index.css' %}">
+
+    {% block extra_head %}{% endblock %}
+  </head>
+  <body>
+
+    {% block content %}(no content){% endblock %}
+
+    <script src="{% static 'dist/index.js' %}"></script>
+    {% block extra_js %}{% endblock %}
+  </body>
+</html>

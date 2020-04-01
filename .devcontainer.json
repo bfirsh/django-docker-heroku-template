@@ -1,0 +1,15 @@
+// See https://aka.ms/vscode-remote/devcontainer.json for format details.
+{
+  "dockerFile": "Dockerfile",
+  // Mount workdir under /code
+  "workspaceMount": "src=${localWorkspaceFolder},dst=/code,type=bind,consistency=delegated",
+  "workspaceFolder": "/code",
+  // HACK: use node_modules from inside image
+  "runArgs": ["-v", "/code/node_modules"],
+  "extensions": [
+    "ms-python.python",
+    "sibiraj-s.vscode-scss-formatter",
+    "esbenp.prettier-vscode",
+    "batisteo.vscode-django"
+  ]
+}

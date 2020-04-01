@@ -1,0 +1,11 @@
+__pycache__
+*.pyc
+.env
+.cache
+node_modules
+{{ project_name }}/static/dist
+{{ project_name }}/static_root
+.env
+/local
+media
+yarn-error.log
