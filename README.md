@@ -1,9 +1,9 @@
 # Django template for Docker + Heroku
 
-This is a template for Django applications that can be run with Docker Compose locally and Heroku in production.
+This is how I set up Django projects to get up and running as quick as possible. In includes a few neat things:
 
-It is how I set up Django projects to get up and running as quick as possible. In includes a few neat things:
-
+- Development environment with Docker Compose
+- Production environment with Heroku
 - Static file compilation with Parcel, so you can use modern JS stuff and SCSS
 - Static file serving with Whitenoise
 - CI with GitHub actions
