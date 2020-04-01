@@ -16,7 +16,7 @@ It is how I set up Django projects to get up and running as quick as possible. I
 
 To get started (replace `myapp` with the name of your app):
 
-    $ docker run -it --rm -v "$PWD":/usr/src/app -w /usr/src/app django django-admin.py startproject --template https://github.com/bfirsh/django-docker-heroku-template/tarball/master --name Dockerfile,README.md,app.json,package.json,script/clean myapp
+    $ docker run -it --rm -v "$PWD":/usr/src/app -w /usr/src/app django django-admin.py startproject --template https://github.com/bfirsh/django-docker-heroku-template/tarball/master --name .gitignore,.dockerignore,Dockerfile,README.md,app.json,package.json,script/clean myapp
     $ cd myapp
     $ chmod +x ./manage.py script/*
 
