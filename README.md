@@ -10,6 +10,7 @@ It is how I set up Django projects to get up and running as quick as possible. I
 - [VSCode remote container config](https://code.visualstudio.com/docs/remote/containers) with linting, Black, refactoring, etc, all set up sensibly
 - A custom User model, which [Django recommend doing when starting a project](https://docs.djangoproject.com/en/3.0/topics/auth/customizing/#substituting-a-custom-user-model)
 - [Gevent workers and DB connection pooling, so you can serve up lots of requests on a Heroku hobby dyno](https://medium.com/@bfirsh/squeezing-every-drop-of-performance-out-of-a-django-app-on-heroku-4b5b1e5a3d44)
+- Sentry for exception logging
 
 ## Getting started
 
