@@ -11,5 +11,7 @@
     "sibiraj-s.vscode-scss-formatter",
     "esbenp.prettier-vscode",
     "batisteo.vscode-django"
-  ]
+  ],
+  "python.formatting.provider": "black",
+  "editor.formatOnSave": true
 }
