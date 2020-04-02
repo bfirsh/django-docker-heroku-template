@@ -2,14 +2,16 @@ version: "3"
 
 services:
   db:
-    image: postgres:10
+    image: postgres:12
+    environment:
+      POSTGRES_PASSWORD: postgres
   web:
     build: .
     command: python -Wd manage.py runserver 0.0.0.0:8000
     environment:
       DEBUG: "true"
       SECRET_KEY: "not secure only use for development"
-      DATABASE_URL: "psql://postgres@db:5432/postgres"
+      DATABASE_URL: "psql://postgres:postgres@db:5432/postgres"
     volumes:
       - .:/code
     ports:
