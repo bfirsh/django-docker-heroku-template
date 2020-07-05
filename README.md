@@ -63,3 +63,9 @@ $ heroku config:set -a {{ project_name }}-production SECRET_KEY=$(openssl rand -
 In the Heroku web UI, go to the app, then the "Deploy" tab, then connect it to a GitHub repo. Then, click "Deploy branch" at the bottom to trigger a deploy. `./manage.py migrate` will be run on deploy.
 
 On this page, you can also set up automatic deploys if you want. You probably want to check "Wait for CI to pass before deploy".
+
+## Static assets
+
+CSS and JS goes in the `assets/` directory. These are compiled by [Parcel](https://parceljs.org/) into `{{ project_name }}/static/dist`. You can write any CSS and JS that Parcel supports -- stuff like modern ES6, JSX, SCSS, and so on.
+
+In development, Docker Compose runs a Parcel daemon alongside your Django development server to compile assets live. For production, Parcel is run in `Dockerfile` to bake the compiled assets into the production artifact.
