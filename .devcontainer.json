@@ -10,8 +10,13 @@
     "ms-python.python",
     "sibiraj-s.vscode-scss-formatter",
     "esbenp.prettier-vscode",
-    "batisteo.vscode-django"
-  ],
-  "python.formatting.provider": "black",
-  "editor.formatOnSave": true
+    "batisteo.vscode-django",
+    "dbaeumer.vscode-eslint",
+    "ms-python.vscode-pylance",
+    "hookyqr.beautify",
+    "bradlc.vscode-tailwindcss",
+    "ms-azuretools.vscode-docker",
+    "csstools.postcss",
+    "knisterpeter.vscode-github"
+  ]
 }
