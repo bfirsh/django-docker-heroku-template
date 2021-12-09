@@ -20,10 +20,10 @@ RUN pip install -r requirements.txt
 COPY package.json yarn.lock /code/
 RUN yarn install
 COPY . /code/
-# Run Parcel to bake compiled static assets into image
+# Bake compiled static assets into image
 RUN yarn build
 RUN SECRET_KEY=unset python manage.py collectstatic --no-input
-# Number of gunicorn worker processes. This is the main lever to adjust memory usage.
+# Number of gunicorn worker processes. This is the main lever to adjust memory usage.
 ENV WEB_CONCURRENCY 3
 # Number of gevent connections per worker process. This has some but smaller effect on memory usage, but mainly a lever to adjust CPU usage, network connections, etc.
 ENV WORKER_CONNECTIONS 50
