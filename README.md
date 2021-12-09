@@ -66,6 +66,6 @@ On this page, you can also set up automatic deploys if you want. You probably wa
 
 ## Static assets
 
-CSS and JS goes in the `assets/` directory. These are compiled by [Parcel](https://parceljs.org/) into `{{ project_name }}/static/dist`. You can write any CSS and JS that Parcel supports -- stuff like modern ES6, JSX, SCSS, and so on.
+CSS and JS goes in the `assets/` directory. These are compiled by [esbuild](https://esbuild.github.io/) and [postcss](https://postcss.org/) into `{{ project_name }}/static/dist`. You can write any modern JS that esbuild supports -- ES6, JSX, etc.
 
 In development, Docker Compose runs a Parcel daemon alongside your Django development server to compile assets live. For production, Parcel is run in `Dockerfile` to bake the compiled assets into the production artifact.
